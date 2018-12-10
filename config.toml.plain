@@ -1,0 +1,30 @@
+[parity]
+base_path = "{PATH_TO_DATA_DIR}"
+no_persistent_txqueue = true
+chain = "{CONFIG}/spec.json"
+keys_path = "{CONFIG}/keys"
+
+[network]
+# Parity will sync by downloading latest state first. Node will be operational in couple minutes.
+warp = false
+
+[rpc]
+interface = "0.0.0.0"
+apis = ["web3", "eth", "net", "parity", "parity_set", "traces", "rpc"]
+cors = ["*"]
+
+
+
+
+[account]
+unlock = ["{MOC_ADDRESS}"]
+password = ["{CONFIG}/password.txt"]
+
+[mining]
+force_sealing = true
+engine_signer = "{MOC_ADDRESS}"
+reseal_on_txs = "none"
+
+[footprint]
+tracing = "on"
+pruning = "archive"
