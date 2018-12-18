@@ -84,11 +84,36 @@
               network_id: "*" // Match any network id
         },             
    
-2. Execute
+2. In migrations/2_deploy_contract.js change
+
+        
+        if (network === 'sokol') ...
+
+to
+     
+        if (network === NETWORK_NAME) ...
+        
+        
+3. Execute
 
     
-        ./deploy_secondary_contracts.sh -m {MOC_ADDRESS} -c {CONSENSUS_ADDRESS} -r {RPC_URL_OF_PARITY_NODE} 
+        ./deploy_secondary_contracts.sh -m {MOC_ADDRESS} -c {CONSENSUS_ADDRESS} -r {RPC_URL_OF_PARITY_NODE}
+        
+4. Result
+
+
+        => contracts.json 
     
 ## Add Validator
+
+1. Clone git@github.com:lukso-network/lukso-dapps-keys-generation.git
+
+2.
+
+3. Create initial key for validator VALIDATOR_NAME
+
+        ./create_initial_key.sh -r RPC_URL_OF_PARITY_NODE -n VALIDATOR_NAME
+        
+
 
  

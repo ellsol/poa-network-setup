@@ -17,7 +17,9 @@ git clone https://github.com/poanetwork/poa-network-consensus-contracts
 git clone https://github.com/poanetwork/poa-chain-spec
 git clone https://github.com/poanetwork/solidity-flattener
 git clone https://github.com/poanetwork/poa-scripts-moc
-
+git clone https://github.com/poanetwork/poa-dapps-validators
+git clone https://github.com/poanetwork/poa-dapps-voting
+git clone https://github.com/poanetwork/poa-dapps-keys-generation
 
 # flatten contracts
 pushd poa-network-consensus-contracts
