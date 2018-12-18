@@ -5,7 +5,7 @@ while getopts ":m:c:r:" opt; do
     case $opt in
         c) consensus="$OPTARG";;
         m) moc_address="$OPTARG";;
-        r) rpc_url="$OPTARG";;
+        n) network_name="$OPTARG";;
     esac
 done
 
@@ -19,8 +19,8 @@ if [[ ${consensus} == "" ]] ; then
   exit 0
 fi
 
-if [[ ${rpc_url} == "" ]] ; then
-  echo "no rpc url provided"
+if [[ ${network_name} == "" ]] ; then
+  echo "no network name provided"
   exit 0
 fi
 
@@ -28,10 +28,9 @@ fi
 
 pushd modules/poa-network-consensus-contracts
 
-DEMO=true
 SAVE_TO_FILE=true
 POA_NETWORK_CONSENSUS_ADDRESS=${consensus}
 MASTER_OF_CEREMONY=${moc_address}
-./node_modules/.bin/truffle migrate --network ${rpc_url}
+./node_modules/.bin/truffle migrate --network ${network_name}
 
 popd

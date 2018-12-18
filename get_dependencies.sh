@@ -30,7 +30,7 @@ popd
 # prepare poa chain spec
 pushd poa-chain-spec
 git checkout --track origin/sokol
-git checkout -b NEW_NETWORK_NAME
+git checkout -b $1
 cp spec.json ../../build/spec.json
 popd
 

@@ -97,7 +97,7 @@ to
 3. Execute
 
     
-        ./deploy_secondary_contracts.sh -m {MOC_ADDRESS} -c {CONSENSUS_ADDRESS} -r {RPC_URL_OF_PARITY_NODE}
+        ./deploy_secondary_contracts.sh -m <MOC_ADDRESS> -c <CONSENSUS_ADDRESS> -r <NETWORK_NAME>
         
 4. Result
 
